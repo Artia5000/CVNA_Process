@@ -20,7 +20,7 @@ function [ meanpks,meanw,count] = CVNAProcess(signal,datastart,dataend,tstart)
     
     %initialize a new figure and show the peak analysis result.
     figure();
-    [pks,locs,w] = findpeaks(segment,'MinPeakProminence',mean(demeaned),'WidthReference','halfheight');
+    [pks,locs,w] = findpeaks(segment,'MinPeakProminence',mean(segment),'WidthReference','halfheight');
     
     %returns the mean amplitude of the identified peaks, the mean width of
     %the identified peaks and their count averaged  of the specified
@@ -31,6 +31,6 @@ function [ meanpks,meanw,count] = CVNAProcess(signal,datastart,dataend,tstart)
     average_window= 10;
     ratio = window_width/average_window;
     count = dimensions(2);
-    count = count/ratio
+    count = count/ratio;
  end
 
