@@ -1,8 +1,8 @@
 function [ meanpks,meanw,count] = CVNAProcess(signal,datastart,dataend,tstart)
 %CVNAProcess function to process CVNA data
 %   signal = variable containing the integrated signal timeseries
-%   datastart = 
-%   dataend = 
+%   datastart = array of starting sample for each Labchart data block
+%   dataend = array of ending sample for each Labchart data block
 %   tstart = start time in minutes of the analysis window
 
 %set start time in sample index and samples to analyze
